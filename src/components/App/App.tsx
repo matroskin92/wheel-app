@@ -20,7 +20,7 @@ function App() {
     fetch('attempts.json')
       .then((res) => res.json())
       .then((data) => setAttempts(data));
-  });
+  }, []);
 
   const wheelHandler = () => {
 
