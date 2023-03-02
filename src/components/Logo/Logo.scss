@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  width: 100%;
+
+  @media (orientation: portrait) {
+    text-align: center;
+  }
+
+  @media (orientation: landscape) {
+    img {
+      width: 15vw;
+    }
+  }
+}

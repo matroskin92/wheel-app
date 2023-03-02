@@ -1,0 +1,19 @@
+[
+  {
+    "rotate": 765,
+    "popup": {
+      "description": "attemtps.description_1",
+      "value": "attemtps.value_1",
+      "before_cta": "attemtps.before_cta_1",
+      "call_to_action": "attemtps.call_to_action_1"
+    }
+  },
+  {
+    "rotate": 1440,
+    "popup": {
+      "description": "attemtps.description_2",
+      "value": "attemtps.value_2",
+      "call_to_action": "attemtps.call_to_action_2"
+    }
+  }
+]

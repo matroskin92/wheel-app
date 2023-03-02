@@ -1,0 +1,185 @@
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background: #f3f3f6;
+  --backgroundSecondary: white;
+  --backgroundAlt: #e77990;
+  --backgroundAltActive: #fc4665;
+  --borderFrame: #ecedef;
+  --error: #f31f1
+  --imagedCard: white;
+  --primary: #3959d9
+  --primaryLight: #c4cdf4;
+  --secondary: #fc4665;
+  --secondaryLight: #f4bde4;
+  --secondaryOpacity10: #fc466510;
+  --secondaryOpacity50: #fc466550;
+  --success: #2eba4d;
+  --successOpacity10: #2eba4d10;
+  --successOpacity50: #2eba4d50;
+  --textPrimary: #3f4250;
+  --textPrimaryContrast: white;
+  --textPrimaryOpacity30: #3f425030;
+  --textSecondary: #9fa0a8;
+  --textSecondaryOpacity50: #9fa0a850;
+  --warn: #fdb43c;
+  --warnOpacity10: #fdb43c10;
+  --warnOpacity20: #fff4e2;
+  --warnOpacity50: #fdb43c50;
+  --textAviator: #5ABEF5;
+  --textPopupAviator: #1D2C40;
+  --textBonusAviator: #FF0A0A;
+  --backgroundAttention: #FFF4E2;
+
+  --buttonFontColor: var(--textPrimaryContrast);
+  --buttonFontColorActive: var(--textPrimaryContrast);
+  --buttonBackgroundColor: var(--primaryLight);
+  --buttonBackgroundColorActive: var(--primary);
+  --buttonBackgroundAlt: var(--backgroundAlt);
+  --buttonBackgroundActive: var(--backgroundAltActive);
+
+  --inputColorBackground: var(--backgroundSecondary);
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+
+  @media (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  width: 100vw;
+  height: 100vh;
+
+  @media (orientation: portrait) {
+    padding: 50px 0;
+  }
+
+  @media (orientation: landscape) {
+    // padding: 50px 100px;
+  }
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  @media (orientation: portrait) {
+    background-image: url(./bg-mobile.png);
+  }
+  @media (orientation: landscape) {
+    background-image: url(./bg-desktop.png);
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 150;
+
+    @media (orientation: landscape) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5vh 0 0 5vw;
+    }
+  }
+
+  &__attempts {
+    position: relative;
+    z-index: 150;
+
+    @media (orientation: portrait) {
+      margin-top: 16px;
+    }
+
+    @media (orientation: landscape) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5vh 5vw 0 0;
+    }
+  }
+
+  &__wheel {
+    position: relative;
+    z-index: 15;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media (orientation: portrait) {
+      margin-top: 32px;
+      flex: 1;
+      padding-bottom: 120px;
+    }
+
+  }
+
+  &__dwarf-left {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url(./dwarf-left.png);
+    background-size: 45vw;
+    background-repeat: no-repeat;
+    background-position: 0 95%;
+
+    @media (min-width: 576px) and (orientation: portrait) {
+      background-size: 30vw;
+    }
+
+    @media (orientation: landscape) {
+      background-size: 16vw;
+    }
+  }
+
+  &__dwarf-right {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url(./dwarf-right.png);
+    background-size: 60vw;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    @media (min-width: 576px) and (orientation: portrait) {
+      background-size: 45vw;
+    }
+
+    @media (orientation: landscape) {
+      background-size: 24vw;
+    }
+  }
+
+  &__modals {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+}

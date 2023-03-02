@@ -1,0 +1,48 @@
+.attempts {
+  display: flex;
+  justify-content: center;
+  @media (orientation: portrait) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @media (orientation: landscape) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  font-family: "Open Sans", sans-serif;
+  color: var(--textPrimaryContrast);
+
+  &__title {
+    @media (orientation: portrait) {
+      font-size: 16px;
+    }
+    @media (orientation: landscape) {
+      font-size: 1.8vw;
+    }
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__count {
+    font-weight: 700;
+    background: #24c93d;
+    border-radius: 50%;
+    text-align: center;
+
+    @media (orientation: portrait) {
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      margin-left: 16px;
+      line-height: 44px;
+    }
+    @media (orientation: landscape) {
+      font-size: 1.8vw;
+      width: 8.5vh;
+      height: 8.5vh;
+      line-height: 8.5vh;
+      margin-top: 1.5vh;
+    }
+  }
+}
