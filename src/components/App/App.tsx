@@ -3,6 +3,8 @@ import Attempts from "../Attempts";
 import Logo from "../Logo";
 import Modal, { IModal } from "../Modal";
 import Wheel from "../Wheel";
+import { ADDITIONAL_URL_PARAMS, HOST } from '../../constant';
+import redirect, { checkEarlierRedirect } from '../../utils/redirect';
 
 import "./App.scss";
 
@@ -15,6 +17,10 @@ function App() {
   const [wheelRotate, setWheelRotate] = useState(0);
   const [wheelCurrentAttempt, setWheelCurrentAttempt] = useState(0);
   const [wheelIsRotating, setWheelIsRotating] = useState(false);
+
+  useEffect(() => {
+    checkEarlierRedirect();
+  }, []);
 
   useEffect(() => {
     fetch('attempts.json')
@@ -44,7 +50,7 @@ function App() {
     }
 
     if (wheelCurrentAttempt === attempts.length) {
-      alert('redirect')
+      redirect(HOST, ADDITIONAL_URL_PARAMS);
     }
   }
 
