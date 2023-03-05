@@ -7,6 +7,7 @@ import { ADDITIONAL_URL_PARAMS, HOST } from '../../constant';
 import redirect, { checkEarlierRedirect } from '../../utils/redirect';
 
 import "./App.scss";
+import vhfix from "../../utils/100vhfix";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
   const [wheelIsRotating, setWheelIsRotating] = useState(false);
 
   useEffect(() => {
+    vhfix();
     checkEarlierRedirect();
   }, []);
 

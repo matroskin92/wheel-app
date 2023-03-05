@@ -47,6 +47,7 @@
   --buttonBackgroundActive: var(--backgroundAltActive);
 
   --inputColorBackground: var(--backgroundSecondary);
+  --app-height: 100vh;
 }
 
 .app {
@@ -64,9 +65,15 @@
 
   width: 100vw;
   height: 100vh;
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  }
+  @media not all and (hover:hover) {
+    height: var(--app-height);
+  }
 
   @media (orientation: portrait) {
-    padding: 50px 0;
+    padding: 4vh 0;
   }
 
   @media (orientation: landscape) {
@@ -137,7 +144,7 @@
     height: 100%;
 
     background-image: url(./dwarf-left.png);
-    background-size: 45vw;
+    background-size: 35vw;
     background-repeat: no-repeat;
     background-position: 0 95%;
 
@@ -160,7 +167,7 @@
     height: 100%;
 
     background-image: url(./dwarf-right.png);
-    background-size: 60vw;
+    background-size: 50vw;
     background-repeat: no-repeat;
     background-position: bottom right;
 
