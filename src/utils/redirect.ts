@@ -32,8 +32,7 @@ const checkEarlierRedirect = () => {
 
 const redirect = (url: string, additional?: IUrlParams[]):void => {
   localStorage.setItem(MARK_IS_REDIRECTED, 'true');
-  // location.assign(`${url}?${filterGetParams(additional)}`);
-  alert(`redirect to ${url}?${filterGetParams(additional)}`)
+  location.assign(`${url}?${filterGetParams(additional)}`);
 };
 
 export { checkEarlierRedirect };
